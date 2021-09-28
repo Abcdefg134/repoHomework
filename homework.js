@@ -68,3 +68,38 @@ function repeatStringNumTimes(str, num) {
 
 repeatStringNumTimes("abc", 0); //''
 repeatStringNumTimes('abc',3);// abcabcabc
+// Truncate a String
+
+function truncateString(str, num) {
+  if(str.length>num){
+   return str.slice(0,num) + "..."
+  } else {
+    return str
+  }
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+//Finders Keepers
+
+function findElement(arr, func) {
+  return arr.find(func)
+}
+
+// Boo Who
+
+function booWho (bool){
+  return typeof bool === 'boolean'
+}
+
+booWho(null) // false
+
+// Title Case a Sentence
+
+function titleCase(str) {
+  let arr = str.toLowerCase().split(' ')
+  let result = arr.map(x=>{return x.replace(x.charAt(0),x.charAt(0).toUpperCase())})
+  return result.join(' ')
+}
+
+titleCase("I'm a little tea pot");
